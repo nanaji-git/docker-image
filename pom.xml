@@ -8,6 +8,6 @@
    <artifactId>docker-image</artifactId>
    <version>1.0</version>
 <build>
-   <finalName>docker-image</finalName>
+   <finalName>hello-image</finalName>
 </build>
 </project>

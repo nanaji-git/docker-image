@@ -2,16 +2,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-k8s-deployment
+  name: k8s-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: sample-k8s-app
+        app: k8s-app
     spec:
       containers:
-      - name: sample-k8s-app-container
+      - name: k8s-app-container
         image: nanajiseelam/hello-image:latest
         ports:
         - containerPort: 8080
@@ -24,9 +24,9 @@ metadata:
   name: my-service
 spec:
   selector:
-    app: sample-k8s-app
+    app: k8s-app
   ports:
     - protocol: TCP
-      port: 80
+      port: 8080
       targetPort: 8080
   type: NodePort

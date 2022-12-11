@@ -40,7 +40,7 @@ pipeline{
                    ]
                  ],
             credentialsId: 'c47be26f-1f83-40cd-bfc2-0aa57d898f84',
-            groupId: 'com.docker.project-group',
+            groupId: 'com.dockeriamge',
             nexusUrl: '18.179.59.200:8081',
             nexusVersion: 'nexus2',
             protocol: 'http',

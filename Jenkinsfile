@@ -13,7 +13,7 @@ pipeline{
           sh 'mvn clean package'
            }
            }
-     stage("code analysis") |{
+     stage("code analysis") {
        steps{
           withSonarQubeEnv(credentialsId: 'sonar') 
            sh 'mvn package sonar:sonar'

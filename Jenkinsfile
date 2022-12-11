@@ -22,5 +22,10 @@ pipeline{
 }           
 }
     }
+      stage("qgates") {
+        steps{
+          waitForQualityGate abortPipeline: false, credentialsId: 'sonarkey'
+}
+}
  } 
 }

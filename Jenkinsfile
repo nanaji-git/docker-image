@@ -61,7 +61,8 @@ pipeline{
       stage("docker image push") {
          steps {
            withCredentials([string(credentialsId: 'docker-key', variable: 'docker')]) {
-           sh 'docker push -u nanajiseelam -p ${docker}'
+             sh 'docker login -u nanajiseelam -p ${docker}'
+             sh 'docker image push nanajiseelam/$JOB_NAME:v1.$BUILD_ID' 
 }
          }
       }

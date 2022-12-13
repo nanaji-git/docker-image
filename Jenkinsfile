@@ -41,7 +41,7 @@ pipeline{
                  ],
             credentialsId: 'c47be26f-1f83-40cd-bfc2-0aa57d898f84',
             groupId: 'com.dockeriamge',
-            nexusUrl: '18.179.59.200:8081',
+            nexusUrl: '18.176.93.24:8081',
             nexusVersion: 'nexus3',
             protocol: 'http',
             repository: 'practice',

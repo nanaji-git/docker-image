@@ -5,6 +5,6 @@ RUN mvn install
 
 FROM openjdk:11.0
 WORKDIR /app
-COPY --from=build /app/target/docker-image.jar /app/
+COPY --from=build /app/target/hello-image.jar /app/
 EXPOSE 8085
 CMD [ "java","-jar","docker-image" ]

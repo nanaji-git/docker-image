@@ -58,5 +58,10 @@ pipeline{
          }
       }      
  } 
+      stage("docker image push") {
+        withCredentials([string(credentialsId: 'docker-key', variable: 'docker')]) {
+           sh 'docker push -u nanajiseelam -p ${docker}'
+}
+      }
 }
 }
